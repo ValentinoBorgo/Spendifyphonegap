@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Perdidos Encontrados</name>
+    <description>
+        Trabajo Practico - Ingenieria de Software II
+    </description>
+    <author email="lucianodgiorgio@gmail.com" href="#">
+        De Giorgio, Luciano - Romero, Maximiliano
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <icon src="res/icon/android/drawable-mdpi-icon.png" />
+</widget>

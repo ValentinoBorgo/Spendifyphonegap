@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src * self blob: data: gap:; style-src * self 'unsafe-inline' blob: data: gap:; script-src * 'self' 'unsafe-eval' 'unsafe-inline' blob: data: gap:; object-src * 'self' blob: data: gap:; img-src * self 'unsafe-inline' blob: data: gap:; connect-src self * 'unsafe-inline' blob: data: gap:; frame-src * self blob: data: gap:;">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *"> -->
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- <link rel="stylesheet" href="../../jquery/jquery.mobile-1.4.5.min.css"> -->
+    <script type="text/javascript" src="../../jquery/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="../../jquery/jquery.mobile-1.4.5.min.js"></script>
+    <!-- Your app title -->
+    <title>Perdidos y Encontrados</title>
+    <!-- Path to your custom app styles-->
+    <link href="../../css/styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="app">
+        <div>
+            <div data-name="home">
+
+                <div class="filtros"><img style="width: 50%;" src="../../assets/icon_original.png"></div>
+
+                <div class="filtros"><button id="todos" class="boton btn-todos seleccionado" onclick="seleccionarFiltro(event)"><a href="#">Todos</a></button></div>
+        
+                <div class="filtros">
+                    <button id="encontrados" class="boton" onclick="seleccionarFiltro(event)"><a href="#">Encontrados</a></button>
+                    <button id="perdidos" class="boton" onclick="seleccionarFiltro(event)"><a href="#">Perdidos</a></button>
+                    <button id="adopcion" class="boton" onclick="seleccionarFiltro(event)"><a href="#">En Adopción</a></button>
+                </div>
+
+                <!-- <div>
+                    <input id="input" class="barra-buscador" type="text">
+                    <button class="boton lupa" onclick="busqueda()">Buscar</button>
+                </div> -->
+
+                <div class="publicaciones">
+                    <button id="crear-publicacion" onclick="crearPublicacion()">
+                        <p style="font-size: small;">Crear Publicacion</p>
+                    </button>
+                    <div id="contenedor"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <span class="ir-arriba icon-arrow-up2"><svg id="icon-arriba" fill="black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zm11.3-395.3l112 112c4.6 4.6 5.9 11.5 3.5 17.4s-8.3 9.9-14.8 9.9H304v96c0 17.7-14.3 32-32 32H240c-17.7 0-32-14.3-32-32V256H144c-6.5 0-12.3-3.9-14.8-9.9s-1.1-12.9 3.5-17.4l112-112c6.2-6.2 16.4-6.2 22.6 0z"/></svg></span>
+
+    <script type="text/javascript" src="../modelo/dto/dto_cant_publi.js"></script>
+    <script type="text/javascript" src="../modelo/dao/dao_cant_publi.js"></script>
+    <script type="text/javascript" src="../modelo/dto/dto_publicacion.js"></script>
+    <script type="text/javascript" src="../modelo/dao/dao_publicacion.js"></script>
+    <script type="text/javascript" src="../modelo/negocio/neg_principal.js"></script>
+    <script type="text/javascript" src="../controlador/principal.js"></script>
+
+    <section class="modal ">
+        <div class="modal-container">
+            <p class="modal-p">¿ Está seguro que desea eliminar la publicación ?</p>
+            <p class="modal-p">Por favor ingrese el email que usó para registrarla</p>
+            <input id="input-modal-eliminar" style="margin-left: 25%; width: 50%;" type="text" maxlength="50">
+            <div class="botonera-crear">
+                <button id="boton-volver"class="boton-crear" onclick="cancelar()">Cancelar</button>
+                <button class="boton-crear" onclick="validarMailEliminar(event)">Confirmar</button>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

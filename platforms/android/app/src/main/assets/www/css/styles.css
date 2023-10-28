@@ -1,0 +1,196 @@
+body {
+    background-color:darkgreen;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.filtros {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.boton {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 3px;
+    background-color: white;
+    color: black;
+}
+
+.btn-todos {
+    text-align: center;
+}
+
+.buscador {
+    display: flex;
+    flex-direction: column;
+}
+
+.seleccionado {
+    background-color: gray;
+}
+
+.publicaciones {
+    margin-top: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#contenedor {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.publi-top {
+    text-align: right;
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+.publicacion {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.imagen-publi {
+    width: 100px;
+    max-height: 100px;
+    margin-top: 20px;
+    border: 1px solid black;
+}
+
+.icon-detalle {
+    width: 40%;
+    padding-top: 7px;
+    padding-right: 35px;
+}
+
+.icon-modificar {
+    width: 40%;
+    padding-top: 7px;
+    padding-right: 35px;
+}
+
+.icon-eliminar {
+    width: 40%;
+    padding-right: 35px;
+}
+
+#input-detalle {
+    display: none;
+    padding-bottom: 10px;
+}
+
+#input-modificar {
+    display: none;
+}
+
+#input-eliminar {
+    display: none;
+}
+
+#crear-publicacion {
+    background-color: darkgreen;
+    color: white;
+    font-size:medium;
+    font-weight: 700;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 40%;
+    margin-top: 10px;
+    margin-left: 30%;
+    display: flex;
+    flex-direction: row;
+}
+
+.ir-arriba {
+	padding: 20px;
+	font-size: 20px;
+	position: fixed;
+	bottom: 20px;
+	padding-left: 270px;
+}
+
+#icon-arriba {
+    width: 50%;
+}
+
+/* MODAL ELIMINAR */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s;
+}
+
+.modal-container {
+    width: 80%;
+    background-color: white;
+    margin: auto;
+    border-radius: 5px;
+    padding: 5px 5px;
+}
+
+.mostrar-modal {
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+}
+
+.modal-p {
+    font-size: 10px;
+    text-align: center;
+}
+
+/* PAGINA CREAR PUBLICACION */
+
+.input-crear {
+    width: 90%;
+}
+
+.botonera-crear {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+.boton-crear {
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 3px;
+    background-color: lightgreen;
+}
+
+#boton-volver {
+    background-color: lightcoral;
+}
+
+#informacion {
+    min-width: 160px;
+    max-width: 160px;
+}

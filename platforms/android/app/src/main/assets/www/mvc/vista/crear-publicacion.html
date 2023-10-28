@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src * self blob: data: gap:; style-src * self 'unsafe-inline' blob: data: gap:; script-src * 'self' 'unsafe-eval' 'unsafe-inline' blob: data: gap:; object-src * 'self' blob: data: gap:; img-src * self 'unsafe-inline' blob: data: gap:; connect-src self * 'unsafe-inline' blob: data: gap:; frame-src * self blob: data: gap:;">
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <script type="text/javascript" src="../../jquery/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="../../jquery/jquery.mobile-1.4.5.min.js"></script>
+    <!-- Your app title -->
+    <title>Perdidos y Encontrados</title>
+    <!-- Path to your custom app styles-->
+    <link href="../../css/styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="app">
+        <div>
+            <div data-name="home">
+
+                <div class="filtros" onclick="volverPrincipal()"><img style="width: 50%;" src="../../assets/icon_original.png"></div>
+
+                <div class="publicaciones">
+                    <div id="contenedor">
+                        <div class="publicacion">
+                            <h3 style="text-align: center;">Crear Publicacion</h3>
+                            <div style="display: flex; margin-top: 10px;">
+                                <div class=publicacion>
+                                    <div style="display: flex; margin-top: 10px;">
+                                        <div class="imagen-publi">
+                                            <img id="img-ruta" src="../../assets/subir.png" onclick="subirImagen();">
+                                            <input id="subir-imagen" style="display: none;" type="file" maxlength="255">
+                                            <label for="input-fecha">Fecha:</label>
+                                            <input id="input-fecha" name="input-fecha" style="max-width: 100px;" type="date">
+                                        </div>
+                                        <div style="margin-left: 10px; margin-top: 5px;">
+                                            <label for="input-nombre">Nombre:</label>
+                                            <input id="input-nombre" name="input-nombre" class="input-crear" maxlength="20"></input>
+                                            <label for="input-mail">Email:</label>
+                                            <input id="input-mail" name="input-mail" class="input-crear" maxlength="50"></input>
+                                            <label for="input-telefono">Telefono:</label>
+                                            <input id="input-telefono" name="input-telefono" class="input-crear" maxlength="10"></input>
+                                            <label for="tipo-publi">Tipo-Publicacion:</label>
+                                            <select name="tipo-publi" id="input-publi" class="input-crear">
+                                                <option value="Perdido">Perdido</option>
+                                                <option value="Encontrado">Encontrado</option>
+                                                <option value="En Adopcion">En Adopcion</option>
+                                            </select>
+                                            <label for="tipo-animal">Animal:</label>
+                                            <select name="tipo-animal" id="input-animal" class="input-crear">
+                                                <option value="Perro">Perro</option>
+                                                <option value="Gato">Gato</option>
+                                            </select>
+                                            <label for="informacion">Informacion:</label>
+                                            <textarea name="informacion" id="informacion" cols="20" rows="5" maxlength="255"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="botonera-crear">
+                                <button id="boton-volver" class="boton-crear" onclick="volverPrincipal()">Volver</button>
+                                <button class="boton-crear" onclick="confirmarPublicacion()">Confirmar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../modelo/dto/dto_publicacion.js"></script>
+    <script type="text/javascript" src="../modelo/dao/dao_publicacion.js"></script>
+    <script type="text/javascript" src="../modelo/negocio/neg_principal.js"></script>
+    <script type="text/javascript" src="../controlador/crear_publicacion.js"></script>
+</body>
+
+</html>

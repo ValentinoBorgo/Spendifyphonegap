@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *">
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>Perdidos y Encontrados</title>
+    <!-- Path to your custom app styles-->
+    <link href="../../css/styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload="obtenerPublicacion()">
+    <div id="app">
+        <div>
+            <div data-name="home">
+
+                <div class="filtros"><img style="width: 50%;" src="../../assets/icon_original.png"></div>
+
+                <div class="publicaciones">
+                    <div id="contenedor">
+                        <div class="publicacion">
+                            <h3 style="text-align: center;">Crear Publicacion</h3>
+                            <div style="display: flex; margin-top: 10px;">
+                                <div class=publicacion>
+                                    <div style="display: flex; margin-top: 10px;">
+                                        <div class="imagen-publi">
+                                            <img id="img-ruta" src="../../jquery/images/perro1.png">
+                                            <label for="input-fecha">Fecha:</label>
+                                            <input id="input-fecha" name="input-fecha" style="max-width: 100px;" type="date" value="2022-11-01" disabled="disabled">
+                                        </div>
+                                        <div style="margin-left: 10px; margin-top: 5px;">
+                                            <label for="input-nombre">Nombre:</label>
+                                            <input id="input-nombre" name="input-nombre" class="input-crear" maxlength="20" disabled="disabled" value="Maxi Romero"></input>
+                                            <label for="input-telefono">Telefono:</label>
+                                            <input id="input-telefono" name="input-telefono" class="input-crear" maxlength="10" disabled="disabled" value="0342-4111222"></input>
+                                            <label for="tipo-publi">Tipo-Publicacion:</label>
+                                            <input id="tipo-publi" name="tipo-publi" class="input-crear" disabled="disabled" type="text" value="Encontrado"/>
+                                            <label for="tipo-animal">Animal:</label>
+                                            <select name="tipo-animal" id="input-animal" class="input-crear" disabled="disabled">
+                                                <option value="Perro">Perro</option>
+                                                <option value="Gato">Gato</option>
+                                            </select>
+                                            <label for="informacion">Informacion:</label>
+                                            <textarea name="informacion" id="informacion" cols="20" rows="5" maxlength="255" disabled="disabled">Se enconto mascota perdida en la direccion xxxxx al yyy. Cualquier consulta realizarla a los datos del contacto</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="botonera-crear">
+                                <button id="boton-volver" class="boton-crear" onclick="volverPrincipal()">Volver</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../controlador/detalle.js"></script>
+</body>
+
+</html>

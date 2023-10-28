@@ -1,0 +1,18 @@
+{
+    "android": {
+        "debug": {
+            "keystore": "clave.keystore",
+            "storePassword": "Ingenierias2",
+            "alias": "clave",
+            "password" : "Ingenierias2",
+            "keystoreType": ""
+        },
+        "release": {
+            "keystore": "clave.keystore",
+            "storePassword": "Ingenierias2",
+            "alias": "clave",
+            "password" : "Ingenierias2",
+            "keystoreType": ""
+        }
+    }
+}

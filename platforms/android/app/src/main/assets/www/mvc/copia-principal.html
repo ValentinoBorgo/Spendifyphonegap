@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *">
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>Perdidos y Encontrados</title>
+    <!-- Path to your custom app styles-->
+    <link href="../../css/styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="app">
+        <div>
+            <div data-name="home">
+
+                <div class="filtros"><img style="width: 50%;" src="../../assets/icon_original.svg"></div>
+
+                <div class="filtros"><button id="todos" class="boton btn-todos seleccionado" onclick="seleccionarFiltro(event)"><a href="#">Todos</a></button></div>
+        
+                <div class="filtros">
+                    <button id="encontrados" class="boton" onclick="seleccionarFiltro(event)"><a href="#">Encontrados</a></button>
+                    <button id="perdidos" class="boton" onclick="seleccionarFiltro(event)"><a href="#">Perdidos</a></button>
+                    <button id="adopcion" class="boton" onclick="seleccionarFiltro(event)"><a href="#">En Adopción</a></button>
+                </div>
+
+                <div>
+                    <input id="input" class="barra-buscador" type="text">
+                    <button class="boton lupa" onclick="busqueda()">Buscar</button>
+                </div>
+
+                <div class="publicaciones">
+                    <h5 style="text-align: center;">Publicaciones</h5>
+                    <button id="crear-publicacion" onclick="crearPublicacion()">
+                        <p style="font-size: small;">Crear Publicacion</p>
+                    </button>
+                    <div id="contenedor"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../controlador/principal.js"></script>
+</body>
+
+</html>
