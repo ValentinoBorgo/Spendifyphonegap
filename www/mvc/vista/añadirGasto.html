@@ -26,27 +26,26 @@
                 <div class="publicaciones">
                     <div id="contenedor">
                         <div class="publicacion">
-                            <h3 style="text-align: center;">Crear Publicacion</h3>
+                            <h3 style="text-align: center;">Añadir ingreso</h3>
                             <div style="display: flex; margin-top: 10px;">
                                 <div class=publicacion>
                                     <div style="display: flex; margin-top: 10px;">
-                                        <div class="imagen-publi">
-                                            <img id="img-ruta" src="../../assets/subir.png" onclick="subirImagen();">
-                                            <input id="subir-imagen" style="display: none;" type="file" maxlength="255">
-                                            <label for="input-fecha">Fecha:</label>
-                                            <input id="input-fecha" name="input-fecha" style="max-width: 100px;" type="date">
-                                        </div>
+                                        
                                         <div style="margin-left: 10px; margin-top: 5px;">
-            
+
+                                            <label for="monto">Monto</label>
+                                            <input type="text" id="monto" placeholder="Monto">
                                             <label for="informacion">Informacion:</label>
-                                            <textarea name="informacion" id="informacion" cols="20" rows="5" maxlength="255"></textarea>
+                                            <input type="text" id="descripcion" placeholder="Descripción">
+                                           
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="botonera-crear">
                                 <button id="boton-volver" class="boton-crear" onclick="volverPrincipal()">Volver</button>
-                                <button class="boton-crear" onclick="confirmarPublicacion()">Confirmar</button>
+                                <button class="boton-crear" onclick="agregarGasto()">Confirmar Gasto</button>
+
                             </div>
                         </div>
                     </div>
@@ -59,7 +58,9 @@
     <script type="text/javascript" src="../modelo/dto/dto_publicacion.js"></script>
     <script type="text/javascript" src="../modelo/dao/dao_publicacion.js"></script>
     <script type="text/javascript" src="../modelo/negocio/neg_principal.js"></script>
-    <script type="text/javascript" src="../controlador/crear_publicacion.js"></script>
+    <script type="text/javascript" src="../controlador/añadirGasto.js"></script>
+    <script type="text/javascript" src="../controlador/principal.js"></script>
+
 </body>
 
 </html>
